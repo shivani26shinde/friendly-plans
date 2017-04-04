@@ -33,7 +33,7 @@ public class TaskListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        ((App) getApplication()).getRepositoryComponent().inject(this);
+        ((App) getApplication()).getAppComponent().inject(this);
         setContentView(R.layout.activity_task_list);
         setUpViews();
         loadTasksToadapter(taskTemplateRepository.getAll());
